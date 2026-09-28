@@ -1,0 +1,50 @@
+---
+sidebar_position: 3
+title: Sécuriser son VPS
+---
+
+# Sécuriser votre VPS
+
+Votre VPS est accessible root dès la livraison — quelques réglages simples réduisent fortement les risques.
+
+## Créer un utilisateur dédié
+
+```bash
+adduser votre_utilisateur
+usermod -aG sudo votre_utilisateur
+```
+
+## Désactiver la connexion root en SSH
+
+Éditez `/etc/ssh/sshd_config` :
+
+```
+PermitRootLogin no
+PasswordAuthentication no
+```
+
+Puis `systemctl restart sshd`. Assurez-vous d'avoir ajouté votre clé SSH publique à `~/.ssh/authorized_keys` de votre nouvel utilisateur **avant** de couper l'accès par mot de passe.
+
+## Pare-feu de base
+
+```bash
+ufw allow OpenSSH
+ufw enable
+```
+
+N'ouvrez que les ports réellement nécessaires à vos services.
+
+## Mises à jour automatiques
+
+```bash
+apt install unattended-upgrades
+dpkg-reconfigure --priority=low unattended-upgrades
+```
+
+## Protection contre le bruteforce
+
+```bash
+apt install fail2ban
+```
+
+Configuration par défaut suffisante dans la plupart des cas — bannit automatiquement les IP après plusieurs tentatives de connexion échouées.

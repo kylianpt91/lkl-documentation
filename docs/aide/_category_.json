@@ -1,0 +1,5 @@
+{
+  "label": "Aide & contact",
+  "position": 5,
+  "link": { "type": "generated-index", "description": "Questions fréquentes et moyens de nous contacter." }
+}
