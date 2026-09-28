@@ -1,0 +1,23 @@
+/* Charte LKL Cloud (même orange que l'espace client). */
+:root {
+  --ifm-color-primary: #FF6A30;
+  --ifm-color-primary-dark: #ff5312;
+  --ifm-color-primary-darker: #f74b08;
+  --ifm-color-primary-darkest: #cb3d07;
+  --ifm-color-primary-light: #ff8151;
+  --ifm-color-primary-lighter: #ff8d63;
+  --ifm-color-primary-lightest: #ffb192;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #ff8151;
+  --ifm-color-primary-dark: #ff6a30;
+  --ifm-color-primary-darker: #ff5e1f;
+  --ifm-color-primary-darkest: #f74b08;
+  --ifm-color-primary-light: #ff9873;
+  --ifm-color-primary-lighter: #ffa483;
+  --ifm-color-primary-lightest: #ffc4ac;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,5 @@
+{
+  "label": "Bots Discord",
+  "position": 3,
+  "link": { "type": "generated-index", "description": "Hébergement de bots Discord Node.js et Python via panel Pterodactyl." }
+}

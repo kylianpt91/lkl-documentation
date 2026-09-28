@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+title: Premiers pas avec votre VPS
+---
+
+# Premiers pas avec votre VPS Linux
+
+Après le paiement de votre commande, votre VPS est déployé automatiquement (comptez quelques minutes). Vous recevez un e-mail dès qu'il est prêt.
+
+## Retrouver les informations de connexion
+
+Depuis l'[espace client](https://clients.lklcloud.fr), ouvrez **Mes services** → votre VPS. Vous y trouverez :
+
+- L'adresse IP de votre serveur
+- Le système installé (Debian ou Ubuntu selon votre choix à la commande)
+- Le nombre de vCores, la RAM et le disque de votre offre
+
+## Se connecter en SSH
+
+```bash
+ssh root@VOTRE_IP
+```
+
+<div className="admonition admonition-note">
+Le mot de passe root initial est fourni au premier démarrage. Nous vous recommandons de créer un utilisateur dédié et de désactiver la connexion SSH root une fois votre configuration terminée.
+</div>
+
+## Console de secours
+
+Si le SSH ne répond pas, la fiche de votre service dans l'espace client propose une **console web** intégrée, utilisable sans configuration réseau particulière.
+
+## Actions disponibles depuis l'espace client
+
+Depuis la fiche de votre VPS :
+
+- **Démarrer / Redémarrer / Arrêter**
+- **Réinstaller le système** (efface toutes les données — une sauvegarde « avant opération » est créée automatiquement)
+- **Suivre la consommation** (CPU, RAM, bande passante)
+
+## Voir aussi
+
+- [Réinstaller ou changer de système](/vps-linux/reinstaller)
+- [Moyens de paiement](/compte/moyens-de-paiement)
