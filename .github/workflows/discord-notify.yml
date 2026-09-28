@@ -1,0 +1,26 @@
+name: Discord notify
+on:
+  push:
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          BRANCH="${GITHUB_REF#refs/heads/}"
+          COMMITS=$(jq -r '.commits[] | "• `\(.id[0:7])` \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
+          N=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
+          PAYLOAD=$(jq -n \
+            --arg username "Github Update APP" \
+            --arg avatar "https://clients.lklcloud.fr/logo.png" \
+            --arg title "🚀 Push on ${GITHUB_REPOSITORY}" \
+            --arg branch "$BRANCH" \
+            --arg commits "$COMMITS" \
+            --arg countLabel "📝 Commits ($N)" \
+            '{ username: $username, avatar_url: $avatar, embeds: [{ title: $title, color: 16738864, fields: [
+              { name: "🌿 Branch", value: $branch },
+              { name: $countLabel, value: $commits }
+            ] }] }')
+          curl -s -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK"
