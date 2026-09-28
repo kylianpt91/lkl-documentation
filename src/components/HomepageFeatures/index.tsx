@@ -42,9 +42,10 @@ function Feature({title, icon, description, to}: FeatureItem) {
   return (
     <div className={clsx('col col--3')}>
       <Link to={to} className={styles.card}>
-        <span className={styles.icon}>{icon}</span>
+        <span className={styles.iconWrap}><span className={styles.icon}>{icon}</span></span>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        <span className={styles.arrow}>Lire →</span>
       </Link>
     </div>
   );
@@ -54,6 +55,7 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <h2 className={styles.sectionTitle}>Par où commencer ?</h2>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

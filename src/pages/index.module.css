@@ -1,23 +1,61 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 6rem 1.5rem 5rem;
+  text-align: center;
+  background:
+    radial-gradient(60% 55% at 18% 0%, rgba(255, 106, 48, 0.16) 0%, rgba(255, 106, 48, 0) 60%),
+    radial-gradient(50% 50% at 100% 20%, rgba(255, 106, 48, 0.10) 0%, rgba(255, 106, 48, 0) 60%),
+    var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.logo {
+  height: 56px;
+  width: 56px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.title em {
+  font-family: var(--lkl-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ifm-color-primary);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 540px;
+  margin: 0 auto 2rem;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
 }
