@@ -21,7 +21,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'fr',
-    locales: ['fr'],
+    locales: ['fr', 'en'],
   },
 
   presets: [
@@ -46,7 +46,7 @@ const config: Config = {
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
-        language: ['fr'],
+        language: ['fr', 'en'],
         indexDocs: true,
         indexBlog: false,
         indexPages: true,
@@ -61,6 +61,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
+      style: 'dark',
       title: 'LKL Cloud',
       logo: {
         alt: 'LKL Cloud',
@@ -70,6 +71,7 @@ const config: Config = {
         {type: 'docSidebar', sidebarId: 'mainSidebar', position: 'left', label: 'Documentation'},
         {href: 'https://clients.lklcloud.fr', label: 'Espace client', position: 'right'},
         {href: 'https://lklcloud.fr', label: 'Site principal', position: 'right'},
+        {type: 'localeDropdown', position: 'right'},
       ],
     },
     footer: {

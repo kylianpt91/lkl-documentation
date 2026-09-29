@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "LKL Cloud",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "LKL Cloud",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Espace client": {
+    "message": "Espace client",
+    "description": "Navbar item with label Espace client"
+  },
+  "item.label.Site principal": {
+    "message": "Site principal",
+    "description": "Navbar item with label Site principal"
+  }
+}
