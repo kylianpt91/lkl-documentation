@@ -60,6 +60,15 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    announcementBar: {
+      id: 'promo-offres',
+      content:
+        'Besoin d\'un serveur performant pour vos projets ? ' +
+        '<a href="https://lklcloud.fr" style="color:#FF6A30;font-weight:700;text-decoration:none">Découvrez nos offres →</a>',
+      backgroundColor: '#17110d',
+      textColor: '#fff',
+      isCloseable: true,
+    },
     navbar: {
       style: 'dark',
       title: 'LKL Cloud',
