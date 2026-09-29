@@ -54,6 +54,9 @@
   --ifm-font-family-base: "Satoshi", -apple-system, "Segoe UI", sans-serif;
   --ifm-heading-font-family: "Satoshi", -apple-system, "Segoe UI", sans-serif;
   --ifm-heading-font-weight: 800;
+  --ifm-font-size-base: 17px;
+  --ifm-menu-link-font-size: 1rem;
+  --ifm-navbar-item-font-size: 1rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --lkl-serif: "Instrument Serif", Georgia, serif;
 }

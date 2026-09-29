@@ -80,6 +80,7 @@ const config: Config = {
         {type: 'docSidebar', sidebarId: 'mainSidebar', position: 'left', label: 'Documentation'},
         {href: 'https://clients.lklcloud.fr', label: 'Espace client', position: 'right'},
         {href: 'https://lklcloud.fr', label: 'Site principal', position: 'right'},
+        {href: 'https://discord.gg/jfNg7sB6A7', label: 'Discord', position: 'right'},
         {type: 'localeDropdown', position: 'right'},
       ],
     },
