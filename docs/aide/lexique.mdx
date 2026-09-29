@@ -1,0 +1,68 @@
+---
+sidebar_position: 2
+title: Lexique
+---
+
+# Lexique
+
+Les mots techniques les plus courants, expliqués simplement.
+
+### VPS
+
+Un serveur virtuel privé : une machine à vous seul, avec sa propre puissance (CPU, RAM, disque), même si elle partage un serveur physique avec d'autres. Vous en avez le contrôle total (accès root).
+
+### SSH
+
+Le moyen standard de se connecter à distance à un VPS en ligne de commande, de façon chiffrée. S'utilise avec `ssh root@VOTRE_IP` depuis un terminal.
+
+### DNS
+
+L'annuaire qui traduit un nom de domaine (`exemple.fr`) en adresse IP, pour que les visiteurs arrivent au bon endroit. Voir [Gérer son nom de domaine](/domaines/premiers-pas).
+
+### Nameserver (serveur DNS)
+
+Le serveur qui répond aux questions DNS pour votre domaine — c'est lui qui sait où pointent vos enregistrements A, CNAME, MX...
+
+### Enregistrement A / CNAME / MX / TXT
+
+Les types de règles DNS les plus courants : **A** pointe un domaine vers une adresse IP, **CNAME** vers un autre nom de domaine, **MX** indique le serveur qui reçoit les e-mails, **TXT** sert à des vérifications diverses (ex. anti-spam).
+
+### Pare-feu (firewall)
+
+Un filtre qui n'autorise que certaines connexions à entrer sur votre serveur. Sur un VPS, c'est à vous de le configurer (voir [Sécuriser son VPS](/vps-linux/securiser)).
+
+### Panel
+
+L'interface web qui permet de gérer un service sans ligne de commande : **Plesk** pour l'hébergement web, **Pterodactyl** pour les bots Discord.
+
+### SSL / Let's Encrypt
+
+Le certificat qui active le cadenas HTTPS sur un site (connexion chiffrée). **Let's Encrypt** est un fournisseur de certificats gratuits, activable en un clic depuis Plesk.
+
+### vCore
+
+Un cœur de processeur virtuel alloué à votre VPS — l'équivalent d'un cœur de CPU physique, dédié à votre machine.
+
+### Snapshot
+
+Une photo à un instant T de votre serveur, utilisée pour les sauvegardes automatiques ou avant une opération risquée (ex. réinstallation).
+
+### 2FA (double authentification)
+
+Un code à 6 chiffres généré par une application (en plus du mot de passe) demandé à chaque connexion, pour protéger votre compte même si votre mot de passe est compromis. Voir [Activer la 2FA](/compte/2fa).
+
+### WHOIS
+
+L'annuaire public qui liste le propriétaire d'un nom de domaine. La confidentialité WHOIS permet de masquer vos coordonnées personnelles dedans.
+
+### RGPD
+
+Le règlement européen qui protège vos données personnelles (droit d'accès, de suppression, de portabilité...). Voir la page [Sécurité](https://clients.lklcloud.fr/securite).
+
+### Uptime
+
+Le pourcentage de temps où un service est réellement disponible. 99,9 % d'uptime représente environ 9 heures d'indisponibilité maximum par an.
+
+### Anti-DDoS
+
+Une protection qui filtre le trafic malveillant destiné à saturer un serveur (attaque par déni de service), avant qu'il n'atteigne votre machine. Voir [Protection anti-DDoS](/informations/antiddos).
