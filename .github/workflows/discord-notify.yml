@@ -12,10 +12,10 @@ jobs:
           BRANCH="${GITHUB_REF#refs/heads/}"
           if [ "$BRANCH" = "prod" ]; then
             COLOR=16738864
-            LABEL="🟠 PRODUCTION"
+            LABEL="🟠 Production"
           else
             COLOR=5793266
-            LABEL="🔵 preprod"
+            LABEL="🔵 Pré Production"
           fi
           # Un commit dont le sujet commence par 🔒 est volontairement masqué
           # ici (ex. détails d'une faille de sécurité tant que le correctif
