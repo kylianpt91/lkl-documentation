@@ -10,6 +10,11 @@ jobs:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
+          case "$GITHUB_REPOSITORY" in
+            */lkl-client) PROJECT="👤 Espace client" ;;
+            */lkl-documentation) PROJECT="📚 Documentation" ;;
+            *) PROJECT="$GITHUB_REPOSITORY" ;;
+          esac
           if [ "$BRANCH" = "prod" ]; then
             COLOR=16738864
             LABEL="🟠 Production"
@@ -31,7 +36,7 @@ jobs:
           PAYLOAD=$(jq -n \
             --arg username "Github Update APP" \
             --arg avatar "https://clients.lklcloud.fr/logo.png" \
-            --arg title "🚀 Push on ${GITHUB_REPOSITORY}" \
+            --arg title "🚀 Push — ${PROJECT}" \
             --arg branch "$BRANCH" \
             --arg label "$LABEL" \
             --argjson color "$COLOR" \
