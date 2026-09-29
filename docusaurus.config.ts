@@ -80,6 +80,7 @@ const config: Config = {
           items: [
             {label: 'VPS Linux', to: '/vps-linux/premiers-pas'},
             {label: 'Hébergement web', to: '/web/plesk-debuter'},
+            {label: 'Noms de domaine', to: '/domaines/premiers-pas'},
             {label: 'Bots Discord', to: '/bots-discord/demarrer'},
             {label: 'Compte & facturation', to: '/compte/moyens-de-paiement'},
           ],
