@@ -1,0 +1,29 @@
+---
+sidebar_position: 1
+title: Deploying your bot
+---
+
+# Deploying your Discord bot
+
+Your bots (Node.js or Python) are managed through the **Pterodactyl** panel, accessible from your service page in the [client area](https://clients.lklcloud.fr).
+
+## Uploading your code
+
+1. Open the panel, **Files** tab.
+2. Upload your files (or clone a Git repository from the dedicated tab).
+3. Set your **Discord token** as an environment variable (never hardcoded in your code).
+
+## Starting the bot
+
+- **Node.js**: the default start command is `npm start` (editable under **Startup**).
+- **Python**: `python bot.py` by default.
+
+Click **Start** at the top of the panel. Logs are shown live in the console.
+
+## Does the bot restart on its own?
+
+Yes: if it crashes, the service restarts automatically. You can also schedule regular restarts from the **Task scheduling** tab.
+
+## Scaling up resources
+
+If your bot grows, change your plan directly from the client area (service page → **Change plan**) — no reinstall needed, your files are kept.

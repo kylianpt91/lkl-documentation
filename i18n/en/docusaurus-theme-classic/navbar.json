@@ -12,11 +12,11 @@
     "description": "Navbar item with label Documentation"
   },
   "item.label.Espace client": {
-    "message": "Espace client",
+    "message": "Client area",
     "description": "Navbar item with label Espace client"
   },
   "item.label.Site principal": {
-    "message": "Site principal",
+    "message": "Main site",
     "description": "Navbar item with label Site principal"
   }
 }

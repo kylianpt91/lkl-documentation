@@ -360,5 +360,62 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.trust.antiDdos": {
+    "message": "Anti-DDoS included"
+  },
+  "homepage.trust.uptime": {
+    "message": "99.9% uptime"
+  },
+  "homepage.trust.support": {
+    "message": "24/7 support"
+  },
+  "homepage.hero.title": {
+    "message": "The help you need, when you need it."
+  },
+  "homepage.hero.subtitle": {
+    "message": "Step-by-step guides for your VPS, web hosting, Discord bots and LKL Cloud account."
+  },
+  "homepage.hero.browseDocs": {
+    "message": "Browse the documentation"
+  },
+  "homepage.hero.contactSupport": {
+    "message": "Contact support"
+  },
+  "homepage.description": {
+    "message": "Guides and answers for your VPS, web hosting and Discord bots from LKL Cloud."
+  },
+  "homepage.feature.vps": {
+    "message": "Getting started, SSH, rescue console, reinstalling."
+  },
+  "homepage.feature.web.title": {
+    "message": "Web hosting"
+  },
+  "homepage.feature.web": {
+    "message": "Plesk panel, domains, SSL, databases, backups."
+  },
+  "homepage.feature.bots.title": {
+    "message": "Discord bots"
+  },
+  "homepage.feature.bots": {
+    "message": "Deploy, configure and scale your Node.js or Python bot."
+  },
+  "homepage.feature.account.title": {
+    "message": "Account & billing"
+  },
+  "homepage.feature.account": {
+    "message": "Payment methods, bank transfer, account security."
+  },
+  "homepage.feature.read": {
+    "message": "Read"
+  },
+  "homepage.feature.sectionTitle": {
+    "message": "Where do you want to start?"
+  },
+  "promo.text": {
+    "message": "Need a high-performance server for your projects?"
+  },
+  "promo.cta": {
+    "message": "Discover our plans"
   }
 }

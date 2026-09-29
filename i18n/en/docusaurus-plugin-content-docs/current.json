@@ -8,47 +8,55 @@
     "description": "The label for category 'VPS Linux' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.VPS Linux.link.generated-index.description": {
-    "message": "Tout pour démarrer et administrer votre VPS KVM Linux LKL Cloud.",
+    "message": "Everything to get started with and administer your LKL Cloud KVM Linux VPS.",
     "description": "The generated-index page description for category 'VPS Linux' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Hébergement web": {
-    "message": "Hébergement web",
+    "message": "Web hosting",
     "description": "The label for category 'Hébergement web' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Hébergement web.link.generated-index.description": {
-    "message": "Hébergement mutualisé avec panel Plesk.",
+    "message": "Shared hosting with the Plesk panel.",
     "description": "The generated-index page description for category 'Hébergement web' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Noms de domaine": {
-    "message": "Noms de domaine",
+    "message": "Domain names",
     "description": "The label for category 'Noms de domaine' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Noms de domaine.link.generated-index.description": {
-    "message": "Enregistrement, DNS et redirections pour vos noms de domaine.",
+    "message": "Registration, DNS and redirects for your domain names.",
     "description": "The generated-index page description for category 'Noms de domaine' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Bots Discord": {
-    "message": "Bots Discord",
+    "message": "Discord bots",
     "description": "The label for category 'Bots Discord' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Bots Discord.link.generated-index.description": {
-    "message": "Hébergement de bots Discord Node.js et Python via panel Pterodactyl.",
+    "message": "Hosting Node.js and Python Discord bots via the Pterodactyl panel.",
     "description": "The generated-index page description for category 'Bots Discord' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Compte & facturation": {
-    "message": "Compte & facturation",
+    "message": "Account & billing",
     "description": "The label for category 'Compte & facturation' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Compte & facturation.link.generated-index.description": {
-    "message": "Paiement, factures et sécurité de votre compte.",
+    "message": "Payment, invoices and account security.",
     "description": "The generated-index page description for category 'Compte & facturation' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Aide & contact": {
-    "message": "Aide & contact",
+    "message": "Help & contact",
     "description": "The label for category 'Aide & contact' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Aide & contact.link.generated-index.description": {
-    "message": "Questions fréquentes et moyens de nous contacter.",
+    "message": "Frequently asked questions and ways to reach us.",
     "description": "The generated-index page description for category 'Aide & contact' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Informations": {
+    "message": "About",
+    "description": "The label for category 'Informations' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Informations.link.generated-index.description": {
+    "message": "Who LKL Cloud is: status, infrastructure and protection.",
+    "description": "The generated-index page description for category 'Informations' in sidebar 'mainSidebar'"
   }
 }

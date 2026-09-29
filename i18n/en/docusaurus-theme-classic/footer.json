@@ -12,27 +12,27 @@
     "description": "The label of footer link with label=VPS Linux linking to /vps-linux/premiers-pas"
   },
   "link.item.label.Hébergement web": {
-    "message": "Hébergement web",
+    "message": "Web hosting",
     "description": "The label of footer link with label=Hébergement web linking to /web/plesk-debuter"
   },
   "link.item.label.Noms de domaine": {
-    "message": "Noms de domaine",
+    "message": "Domain names",
     "description": "The label of footer link with label=Noms de domaine linking to /domaines/premiers-pas"
   },
   "link.item.label.Bots Discord": {
-    "message": "Bots Discord",
+    "message": "Discord bots",
     "description": "The label of footer link with label=Bots Discord linking to /bots-discord/demarrer"
   },
   "link.item.label.Compte & facturation": {
-    "message": "Compte & facturation",
+    "message": "Account & billing",
     "description": "The label of footer link with label=Compte & facturation linking to /compte/moyens-de-paiement"
   },
   "link.item.label.Site principal": {
-    "message": "Site principal",
+    "message": "Main site",
     "description": "The label of footer link with label=Site principal linking to https://lklcloud.fr"
   },
   "link.item.label.Espace client": {
-    "message": "Espace client",
+    "message": "Client area",
     "description": "The label of footer link with label=Espace client linking to https://clients.lklcloud.fr"
   },
   "link.item.label.Support": {
@@ -40,7 +40,7 @@
     "description": "The label of footer link with label=Support linking to mailto:support@lklcloud.fr"
   },
   "copyright": {
-    "message": "LKL CLOUD — Association déclarée (loi 1901) — © 2026",
+    "message": "LKL CLOUD — Registered nonprofit association (French law of 1901) — © 2026",
     "description": "The footer copyright"
   }
 }

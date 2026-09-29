@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
+import Translate, {translate} from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
@@ -7,30 +8,33 @@ import {ArrowRight, MessageCircle, ShieldCheck, Zap, Headset} from 'lucide-react
 
 import styles from './index.module.css';
 
-const trustItems = [
-  {icon: ShieldCheck, label: 'Anti-DDoS inclus'},
-  {icon: Zap, label: '99,9 % de disponibilité'},
-  {icon: Headset, label: 'Support 24/7'},
-];
-
 function HomepageHeader() {
+  const trustItems = [
+    {icon: ShieldCheck, label: translate({id: 'homepage.trust.antiDdos', message: 'Anti-DDoS inclus'})},
+    {icon: Zap, label: translate({id: 'homepage.trust.uptime', message: '99,9 % de disponibilité'})},
+    {icon: Headset, label: translate({id: 'homepage.trust.support', message: 'Support 24/7'})},
+  ];
   return (
     <header className={styles.heroBanner}>
       <img src="/img/logo.png" alt="" className={styles.logo} />
       <h1 className={styles.title}>
-        L'aide dont vous avez <em>besoin</em>,<br />quand vous en avez besoin.
+        <Translate id="homepage.hero.title">
+          L'aide dont vous avez besoin, quand vous en avez besoin.
+        </Translate>
       </h1>
       <p className={styles.subtitle}>
-        Guides pas à pas pour vos VPS, hébergements web, bots Discord et votre compte LKL Cloud.
+        <Translate id="homepage.hero.subtitle">
+          Guides pas à pas pour vos VPS, hébergements web, bots Discord et votre compte LKL Cloud.
+        </Translate>
       </p>
       <div className={styles.buttons}>
         <Link className={styles.buttonPrimary} to="/vps-linux/premiers-pas">
-          Parcourir la documentation
+          <Translate id="homepage.hero.browseDocs">Parcourir la documentation</Translate>
           <ArrowRight size={16} strokeWidth={2.5} />
         </Link>
         <Link className={styles.buttonSecondary} to="/aide/faq">
           <MessageCircle size={16} strokeWidth={2.5} />
-          Contacter le support
+          <Translate id="homepage.hero.contactSupport">Contacter le support</Translate>
         </Link>
       </div>
       <ul className={styles.trustRow}>
@@ -50,7 +54,10 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Guides et réponses pour vos VPS, hébergements web et bots Discord LKL Cloud.">
+      description={translate({
+        id: 'homepage.description',
+        message: 'Guides et réponses pour vos VPS, hébergements web et bots Discord LKL Cloud.',
+      })}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

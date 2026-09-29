@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+title: Getting started with your VPS
+---
+
+# Getting started with your Linux VPS
+
+After your order is paid, your VPS is deployed automatically (usually within a few minutes). You'll get an email as soon as it's ready.
+
+## Finding your connection details
+
+From the [client area](https://clients.lklcloud.fr), open **My services** → your VPS. You'll find:
+
+- Your server's IP address
+- The installed system (Debian or Ubuntu, based on your choice at checkout)
+- The vCores, RAM and disk of your plan
+
+## Connecting via SSH
+
+```bash
+ssh root@YOUR_IP
+```
+
+<div className="admonition admonition-note">
+The initial root password is provided on first boot. We recommend creating a dedicated user and disabling root SSH login once your setup is done.
+</div>
+
+## Rescue console
+
+If SSH isn't responding, your service page in the client area offers a built-in **web console**, usable without any network configuration.
+
+## Actions available from the client area
+
+From your VPS's service page:
+
+- **Start / Restart / Stop**
+- **Reinstall the system** (erases all data — a "before operation" backup is created automatically)
+- **Track usage** (CPU, RAM, bandwidth)
+
+## See also
+
+- [Reinstalling or changing your system](/vps-linux/reinstaller)
+- [Payment methods](/compte/moyens-de-paiement)
