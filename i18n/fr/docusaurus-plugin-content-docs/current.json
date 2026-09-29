@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.mainSidebar.category.VPS Linux": {
+    "message": "VPS Linux",
+    "description": "The label for category 'VPS Linux' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.VPS Linux.link.generated-index.description": {
+    "message": "Tout pour démarrer et administrer votre VPS KVM Linux LKL Cloud.",
+    "description": "The generated-index page description for category 'VPS Linux' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Hébergement web": {
+    "message": "Hébergement web",
+    "description": "The label for category 'Hébergement web' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Hébergement web.link.generated-index.description": {
+    "message": "Hébergement mutualisé avec panel Plesk.",
+    "description": "The generated-index page description for category 'Hébergement web' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Bots Discord": {
+    "message": "Bots Discord",
+    "description": "The label for category 'Bots Discord' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Bots Discord.link.generated-index.description": {
+    "message": "Hébergement de bots Discord Node.js et Python via panel Pterodactyl.",
+    "description": "The generated-index page description for category 'Bots Discord' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Compte & facturation": {
+    "message": "Compte & facturation",
+    "description": "The label for category 'Compte & facturation' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Compte & facturation.link.generated-index.description": {
+    "message": "Paiement, factures et sécurité de votre compte.",
+    "description": "The generated-index page description for category 'Compte & facturation' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Aide & contact": {
+    "message": "Aide & contact",
+    "description": "The label for category 'Aide & contact' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Aide & contact.link.generated-index.description": {
+    "message": "Questions fréquentes et moyens de nous contacter.",
+    "description": "The generated-index page description for category 'Aide & contact' in sidebar 'mainSidebar'"
+  }
+}
