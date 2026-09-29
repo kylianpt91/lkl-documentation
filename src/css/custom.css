@@ -71,3 +71,73 @@
 }
 
 .navbar__title, .navbar__brand { font-weight: 800; }
+
+/* ── Pagination précédent/suivant en bas de chaque page ──────────────── */
+.pagination-nav__link {
+  border-radius: 16px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 1.1rem 1.3rem;
+  transition: border-color .15s, transform .15s, box-shadow .15s;
+}
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -18px rgba(255, 106, 48, 0.45);
+}
+.pagination-nav__sublabel {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 4px;
+}
+.pagination-nav__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+/* ── Pied de page ──────────────────────────────────────────────────── */
+.footer.footer--dark {
+  --ifm-footer-background-color: #17110d;
+  --ifm-footer-color: #cabcb2;
+  --ifm-footer-link-color: #cabcb2;
+  --ifm-footer-title-color: #fff;
+  position: relative;
+  padding-top: 4rem;
+}
+.footer.footer--dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent);
+}
+.footer__title {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+.footer__item {
+  padding: 0;
+}
+.footer__link-item {
+  font-size: 14px;
+  transition: color .15s;
+}
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-light);
+  text-decoration: none;
+}
+.footer__bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  color: rgba(202, 188, 178, 0.6);
+}

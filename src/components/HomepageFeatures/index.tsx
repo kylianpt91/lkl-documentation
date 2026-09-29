@@ -1,12 +1,13 @@
-import type {ReactNode} from 'react';
+import type {ReactNode, ComponentType} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
+import {Server, Globe, Bot, CreditCard, ArrowRight} from 'lucide-react';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  icon: string;
+  icon: ComponentType<{size?: number; strokeWidth?: number}>;
   description: string;
   to: string;
 };
@@ -14,38 +15,38 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'VPS Linux',
-    icon: '🖥️',
+    icon: Server,
     description: 'Premiers pas, SSH, console de secours, réinstallation.',
     to: '/vps-linux/premiers-pas',
   },
   {
     title: 'Hébergement web',
-    icon: '🌐',
+    icon: Globe,
     description: 'Panel Plesk, domaines, SSL, bases de données, sauvegardes.',
     to: '/web/plesk-debuter',
   },
   {
     title: 'Bots Discord',
-    icon: '🤖',
+    icon: Bot,
     description: 'Déployer, configurer et faire évoluer votre bot Node.js ou Python.',
     to: '/bots-discord/demarrer',
   },
   {
     title: 'Compte & facturation',
-    icon: '💳',
+    icon: CreditCard,
     description: 'Moyens de paiement, virement bancaire, sécurité du compte.',
     to: '/compte/moyens-de-paiement',
   },
 ];
 
-function Feature({title, icon, description, to}: FeatureItem) {
+function Feature({title, icon: Icon, description, to}: FeatureItem) {
   return (
     <div className={clsx('col col--3')}>
       <Link to={to} className={styles.card}>
-        <span className={styles.iconWrap}><span className={styles.icon}>{icon}</span></span>
+        <span className={styles.iconWrap}><Icon size={20} strokeWidth={2.25} /></span>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
-        <span className={styles.arrow}>Lire →</span>
+        <span className={styles.arrow}>Lire <ArrowRight size={13} strokeWidth={2.5} /></span>
       </Link>
     </div>
   );
