@@ -102,6 +102,9 @@ const config: Config = {
           items: [
             {label: 'Site principal', href: 'https://lklcloud.fr'},
             {label: 'Espace client', href: 'https://clients.lklcloud.fr'},
+            {label: 'Statut des services', href: 'https://clients.lklcloud.fr/status'},
+            {label: 'Roadmap', href: 'https://clients.lklcloud.fr/roadmap'},
+            {label: 'Sécurité', href: 'https://clients.lklcloud.fr/securite'},
             {label: 'Support', href: 'mailto:support@lklcloud.fr'},
           ],
         },

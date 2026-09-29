@@ -6,3 +6,12 @@ title: Protection système
 # Protection système
 
 Chaque VPS est isolé des autres clients (virtualisation KVM) : ce qui se passe sur un serveur n'affecte jamais les autres. Le socle (hyperviseur) reçoit ses mises à jour de sécurité en continu de notre côté. Sur votre propre VPS, nous vous recommandons d'appliquer les réglages de la page [Sécuriser son VPS](/vps-linux/securiser) (utilisateur dédié, mises à jour automatiques, fail2ban) — c'est vous qui gérez l'intérieur de votre serveur.
+
+Côté infrastructure et compte, plusieurs protections s'appliquent par défaut :
+
+- **Hébergement en France (UE)** : infrastructure et sauvegardes localisées en France, aucune donnée personnelle transférée hors de l'Espace économique européen.
+- **Sauvegardes chiffrées** : snapshots automatiques quotidiens, conservés 7 jours, restauration en libre-service depuis l'espace client.
+- **Cloisonnement des données** : chaque client ne peut techniquement jamais accéder aux données d'un autre, même en cas de faille applicative (Row-Level Security).
+- **Divulgation responsable** : une faille de sécurité à signaler ? Écrivez à [security@lklcloud.fr](mailto:security@lklcloud.fr) — accusé de réception sous 72 h.
+
+Le détail complet des mesures de sécurité du compte (2FA, chiffrement, journal d'audit...) est sur la page [Sécurité de l'espace client](https://clients.lklcloud.fr/securite).

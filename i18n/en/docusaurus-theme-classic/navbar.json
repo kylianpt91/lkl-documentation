@@ -18,5 +18,9 @@
   "item.label.Site principal": {
     "message": "Main site",
     "description": "Navbar item with label Site principal"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
   }
 }
