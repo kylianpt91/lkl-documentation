@@ -17,7 +17,16 @@ jobs:
             COLOR=5793266
             LABEL="🔵 preprod"
           fi
-          COMMITS=$(jq -r '.commits[] | "• `\(.id[0:7])` \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
+          # Un commit dont le sujet commence par 🔒 est volontairement masqué
+          # ici (ex. détails d'une faille de sécurité tant que le correctif
+          # n'est pas confirmé en prod) : le reste des commits s'affiche
+          # normalement, cette convention doit rester rare.
+          COMMITS=$(jq -r '.commits[] | (.message | split("\n")[0]) as $subject |
+            if ($subject | startswith("🔒")) then
+              "• `\(.id[0:7])` **⚠️ À noter : non affiché ici pour raisons de sécurité** — \(.author.name)"
+            else
+              "• `\(.id[0:7])` \($subject) — \(.author.name)"
+            end' "$GITHUB_EVENT_PATH")
           N=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
           PAYLOAD=$(jq -n \
             --arg username "Github Update APP" \
