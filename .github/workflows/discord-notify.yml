@@ -10,6 +10,13 @@ jobs:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
+          if [ "$BRANCH" = "prod" ]; then
+            COLOR=16738864
+            LABEL="🟠 PRODUCTION"
+          else
+            COLOR=5793266
+            LABEL="🔵 preprod"
+          fi
           COMMITS=$(jq -r '.commits[] | "• `\(.id[0:7])` \(.message | split("\n")[0]) — \(.author.name)"' "$GITHUB_EVENT_PATH")
           N=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
           PAYLOAD=$(jq -n \
@@ -17,10 +24,12 @@ jobs:
             --arg avatar "https://clients.lklcloud.fr/logo.png" \
             --arg title "🚀 Push on ${GITHUB_REPOSITORY}" \
             --arg branch "$BRANCH" \
+            --arg label "$LABEL" \
+            --argjson color "$COLOR" \
             --arg commits "$COMMITS" \
             --arg countLabel "📝 Commits ($N)" \
-            '{ username: $username, avatar_url: $avatar, embeds: [{ title: $title, color: 16738864, fields: [
-              { name: "🌿 Branch", value: $branch },
+            '{ username: $username, avatar_url: $avatar, embeds: [{ title: $title, color: $color, fields: [
+              { name: "🌿 Branch", value: $label },
               { name: $countLabel, value: $commits }
             ] }] }')
           curl -s -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK"
