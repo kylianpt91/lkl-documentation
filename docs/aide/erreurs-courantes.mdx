@@ -1,0 +1,37 @@
+---
+sidebar_position: 4
+title: Erreurs courantes
+---
+
+# Erreurs courantes
+
+### « Connection refused » ou « Connection timed out » en SSH
+
+- Vérifiez que le service est bien démarré depuis l'espace client (fiche du VPS → statut).
+- Vérifiez que vous utilisez la bonne adresse IP (fiche du service).
+- Si vous avez modifié votre pare-feu vous-même, assurez-vous que le port 22 (ou celui que vous avez configuré) est bien ouvert.
+- En dernier recours, utilisez la console de secours intégrée à l'espace client (voir [Premiers pas avec votre VPS](/vps-linux/premiers-pas)), qui ne dépend pas du réseau.
+
+### « Permission denied (publickey) » en SSH
+
+Votre clé SSH n'est pas (ou plus) reconnue par le serveur. Si vous venez de [réinstaller votre VPS](/vps-linux/reinstaller), vos clés enregistrées sont réinjectées automatiquement — vérifiez qu'une clé est bien ajoutée dans **Compte → Sécurité → Clés SSH**. Sinon, utilisez la console de secours pour vous reconnecter et corriger `~/.ssh/authorized_keys` à la main.
+
+### Le site web affiche une erreur 502 ou ne charge pas
+
+- Dans Plesk, vérifiez que le service web (Apache/nginx) est bien actif pour ce domaine.
+- Vérifiez les logs d'erreur du site (Plesk → onglet **Journaux**).
+- Si vous venez tout juste d'ajouter le domaine, laissez quelques minutes le temps que la configuration se propage.
+
+### Mon domaine ne pointe pas vers mon site
+
+Un changement DNS met de quelques minutes à quelques heures à se propager selon le TTL choisi (voir [Gérer son nom de domaine](/domaines/premiers-pas)). Si ça persiste au-delà de 24 h, vérifiez que l'enregistrement A pointe bien vers la bonne IP.
+
+### Mon bot Discord ne démarre pas
+
+- Consultez les logs en direct dans le panel Pterodactyl (onglet **Console**) : l'erreur exacte y est généralement affichée.
+- Vérifiez que votre token Discord est bien renseigné dans les variables d'environnement, pas en clair dans le code.
+- Vérifiez que la commande de démarrage (**Startup**) correspond bien à votre projet (`npm start`, `python bot.py`...).
+
+### Rien de tout ça ne résout mon problème
+
+Ouvrez un ticket de support depuis l'espace client (réponse la plus rapide), ou écrivez à [support@lklcloud.fr](mailto:support@lklcloud.fr).
