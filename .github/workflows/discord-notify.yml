@@ -21,12 +21,25 @@ jobs:
           # ici (ex. détails d'une faille de sécurité tant que le correctif
           # n'est pas confirmé en prod) : le reste des commits s'affiche
           # normalement, cette convention doit rester rare.
-          COMMITS=$(jq -r '.commits[] | (.message | split("\n")[0]) as $subject |
-            if ($subject | startswith("🔒")) then
-              "• `\(.id[0:7])` **⚠️ À noter : non affiché ici pour raisons de sécurité** — \(.author.name)"
-            else
-              "• `\(.id[0:7])` \($subject) — \(.author.name)"
-            end' "$GITHUB_EVENT_PATH")
+          #
+          # Discord refuse tout embed dont un champ dépasse 1024 caractères
+          # (rejet silencieux : curl seul ne le voit pas, il faut vérifier la
+          # réponse — déjà arrivé avec plusieurs commits groupés en un push).
+          # On limite donc à 6 commits affichés, chaque sujet tronqué à 70
+          # caractères, avec un total qui reste large sous la limite.
+          COMMITS=$(jq -r '
+            (.commits | length) as $total
+            | [.commits[:6][] | (.message | split("\n")[0]) as $subject |
+                ($subject | if length > 70 then .[0:70] + "…" else . end) as $short |
+                if ($subject | startswith("🔒")) then
+                  "• `\(.id[0:7])` **⚠️ À noter : non affiché ici pour raisons de sécurité** — \(.author.name)"
+                else
+                  "• `\(.id[0:7])` \($short) — \(.author.name)"
+                end
+              ] as $lines
+            | (if $total > 6 then ($lines + ["… et " + ($total - 6 | tostring) + " commit(s) de plus"]) else $lines end)
+            | join("\n")
+          ' "$GITHUB_EVENT_PATH")
           N=$(jq '.commits | length' "$GITHUB_EVENT_PATH")
           PAYLOAD=$(jq -n \
             --arg username "Github Update APP" \
@@ -41,4 +54,9 @@ jobs:
               { name: "🌿 Branch", value: $label },
               { name: $countLabel, value: $commits }
             ] }] }')
-          curl -s -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK"
+          HTTP_CODE=$(curl -s -o /tmp/discord_response.json -w "%{http_code}" -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK")
+          if [ "$HTTP_CODE" -ge 300 ]; then
+            echo "::error::Discord a refusé le message (HTTP $HTTP_CODE) : $(cat /tmp/discord_response.json)"
+            exit 1
+          fi
+          echo "Notification envoyée avec succès (HTTP $HTTP_CODE)"
