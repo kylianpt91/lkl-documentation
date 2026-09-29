@@ -21,8 +21,32 @@ Oui. LKL Cloud est une association loi 1901 déclarée :
 
 Oui, LKL Cloud exploite son propre serveur dédié, sans reposer sur un hébergeur cloud tiers pour la partie hébergement — vos services tournent directement sur notre infrastructure.
 
-{/*
-  Sections restantes en attente de réponses de Kylian avant publication :
-  ports ouverts, protection système, anti-DDoS (fournisseur/capacité),
-  partenariat, recrutement, programme étudiant.
-*/}
+## Tous les ports sont-ils ouverts ?
+
+Ça dépend du type de service :
+
+- **VPS** : tous les ports sont ouverts, vous configurez votre propre pare-feu comme vous le souhaitez (voir [Sécuriser son VPS](/vps-linux/securiser)).
+- **Hébergement web** : seuls les ports 80 (HTTP) et 443 (HTTPS) sont utilisés, ce qui couvre l'usage normal d'un site web.
+- **Bots Discord** : les ports nécessaires sont ouverts automatiquement par le panel, sans configuration de votre part.
+
+Une restriction temporaire peut s'appliquer sur un port précis en cas d'attaque en cours, le temps que le filtrage anti-DDoS fasse son travail — c'est rare et automatique.
+
+## Protection système
+
+Chaque VPS est isolé des autres clients (virtualisation KVM) : ce qui se passe sur un serveur n'affecte jamais les autres. Le socle (hyperviseur) reçoit ses mises à jour de sécurité en continu de notre côté. Sur votre propre VPS, nous vous recommandons d'appliquer les réglages de la page [Sécuriser son VPS](/vps-linux/securiser) (utilisateur dédié, mises à jour automatiques, fail2ban) — c'est vous qui gérez l'intérieur de votre serveur.
+
+## Protection anti-DDoS
+
+Vos services sont protégés par un filtrage anti-DDoS de qualité professionnelle (capacité de plusieurs Tbps, réaction en moins d'une seconde), sur les couches réseau (3/4) et applicative (7). Le site, l'espace client et le panel bénéficient en plus d'une protection dédiée côté web.
+
+## Partenariat
+
+Vous représentez une communauté, un serveur ou un média et souhaitez un partenariat ? Écrivez-nous à [support@lklcloud.fr](mailto:support@lklcloud.fr) en présentant votre projet et votre audience — nous revenons vers vous avec une proposition adaptée.
+
+## Recrutement
+
+LKL Cloud ne recrute pas en poste fixe pour le moment. Si vous souhaitez proposer votre aide (bénévolat, stage) ou nous faire part d'une candidature spontanée, contactez-nous à [support@lklcloud.fr](mailto:support@lklcloud.fr).
+
+## Programme étudiant
+
+Une offre à tarif réduit pour les étudiants est en réflexion. Si vous êtes intéressé, écrivez-nous à [support@lklcloud.fr](mailto:support@lklcloud.fr) — cela nous aide à prioriser sa mise en place.
