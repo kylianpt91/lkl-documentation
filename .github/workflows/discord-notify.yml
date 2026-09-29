@@ -10,11 +10,19 @@ jobs:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
-          case "$GITHUB_REPOSITORY" in
-            */lkl-client) PROJECT="👤 Espace client" ;;
-            */lkl-documentation) PROJECT="📚 Documentation" ;;
-            *) PROJECT="$GITHUB_REPOSITORY" ;;
-          esac
+          # Le libellé suit la partie RÉELLEMENT modifiée (fichiers touchés par
+          # le push) : contenu des fiches (docs/) vs technique du site de doc
+          # (config, thème, workflows...), pas juste "Documentation" pour tout.
+          ALL_FILES=$(jq -r '[.commits[] | (.added // []) + (.removed // []) + (.modified // [])] | flatten | unique | .[]' "$GITHUB_EVENT_PATH")
+          TAGS=""
+          if echo "$ALL_FILES" | grep -q '^docs/'; then
+            TAGS="📖 Fiches de documentation"
+          fi
+          if echo "$ALL_FILES" | grep -qv '^docs/'; then
+            [ -n "$TAGS" ] && TAGS="$TAGS + "
+            TAGS="${TAGS}⚙️ Documentation (technique)"
+          fi
+          PROJECT="${TAGS:-📚 Documentation}"
           if [ "$BRANCH" = "prod" ]; then
             COLOR=16738864
             LABEL="🟠 Production"
