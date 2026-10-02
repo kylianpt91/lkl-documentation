@@ -5,14 +5,15 @@ title: Réinstaller ou changer de système
 
 # Réinstaller ou changer de système
 
-Depuis la fiche de votre VPS dans l'[espace client](https://clients.lklcloud.fr), ouvrez **Réinstaller l'OS**.
+La réinstallation du système en libre-service depuis l'espace client n'est **pas encore disponible**.
 
-:::warning
-Toutes les données du serveur sont effacées. Une sauvegarde « avant opération » est créée automatiquement avant le lancement.
+Si vous avez besoin de repartir d'un système propre sur votre VPS, [ouvrez un ticket](https://clients.lklcloud.fr/support/nouveau) avec :
+
+- le service concerné,
+- la distribution souhaitée (Debian ou Ubuntu).
+
+Notre équipe s'en charge manuellement.
+
+:::warning Toutes les données seront effacées
+Comme pour toute réinstallation, le disque est intégralement remplacé. Si vous avez des données à conserver, faites une [sauvegarde](/vps-linux/premiers-pas#sauvegardes) avant d'ouvrir le ticket.
 :::
-
-1. Choisissez la distribution (Debian ou Ubuntu).
-2. Un nouveau mot de passe root est généré et affiché une seule fois — notez-le immédiatement.
-3. Vos clés SSH enregistrées sont réinjectées automatiquement via cloud-init.
-
-Comptez 3 à 5 minutes. Le service redémarre automatiquement une fois l'opération terminée.

@@ -17,25 +17,41 @@ From the [client area](https://clients.lklcloud.fr), open **My services** → yo
 
 ## Connecting via SSH
 
+If you added a public key in **Settings → SSH keys** *before* ordering, it's injected automatically:
+
 ```bash
 ssh root@YOUR_IP
 ```
 
+Otherwise, a root password is generated and shown once on the service page (blurred, click to reveal or copy). Change it on your first connection.
+
 <div className="admonition admonition-note">
-The initial root password is provided on first boot. We recommend creating a dedicated user and disabling root SSH login once your setup is done.
+Adding an SSH key <em>after</em> the service was created does not add it to an already-active VPS automatically: open a ticket to have it added manually in the meantime.
 </div>
 
 ## Rescue console
 
-If SSH isn't responding, your service page in the client area offers a built-in **web console**, usable without any network configuration.
+If SSH isn't responding, your service page offers a **console**: you type a command, confirm, and the result appears after a few seconds to a minute. This isn't an interactive terminal like SSH (no live file editing, one command at a time).
+
+## Backups
+
+There's no periodic automatic backup yet: each backup is triggered manually, from the **Backups** tab of the service page.
+
+- **€1** charged on demand, automatically refunded if the backup fails for a technical reason.
+- Ready within a few minutes.
+- Free, one-click restore.
+
+## Tracking usage
+
+The **Usage** tab shows the real evolution of CPU, RAM and network over the last 30 days (measurements reported every minute, not simulated).
 
 ## Actions available from the client area
 
 From your VPS's service page:
 
 - **Start / Restart / Stop**
-- **Reinstall the system** (erases all data — a "before operation" backup is created automatically)
-- **Track usage** (CPU, RAM, bandwidth)
+- **Change plan** (actually resizes vCPU/RAM/disk)
+- **Clone** the service into a new instance
 
 ## See also
 

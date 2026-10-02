@@ -17,25 +17,41 @@ Depuis l'[espace client](https://clients.lklcloud.fr), ouvrez **Mes services** �
 
 ## Se connecter en SSH
 
+Si vous avez ajouté une clé publique dans **Paramètres → Clés SSH** *avant* de commander, elle est injectée automatiquement :
+
 ```bash
 ssh root@VOTRE_IP
 ```
 
+Sinon, un mot de passe root est généré et affiché une seule fois sur la fiche du service (zone floutée, cliquez pour révéler ou copier). Changez-le dès votre première connexion.
+
 <div className="admonition admonition-note">
-Le mot de passe root initial est fourni au premier démarrage. Nous vous recommandons de créer un utilisateur dédié et de désactiver la connexion SSH root une fois votre configuration terminée.
+Ajouter une clé SSH <em>après</em> la création du service ne la met pas automatiquement sur un VPS déjà actif : ouvrez un ticket pour l'ajouter manuellement en attendant.
 </div>
 
 ## Console de secours
 
-Si le SSH ne répond pas, la fiche de votre service dans l'espace client propose une **console web** intégrée, utilisable sans configuration réseau particulière.
+Si le SSH ne répond pas, la fiche de votre service propose une **console** : vous tapez une commande, vous validez, le résultat s'affiche après quelques secondes à une minute. Ce n'est pas un terminal interactif comme SSH (pas d'édition de fichier en direct, une seule commande à la fois).
+
+## Sauvegardes
+
+Il n'y a pas encore de sauvegarde automatique périodique : chaque sauvegarde est déclenchée manuellement, depuis l'onglet **Sauvegardes** de la fiche du service.
+
+- **1 €** débité à la demande, automatiquement remboursé si la sauvegarde échoue pour une raison technique.
+- Prête en quelques minutes.
+- Restauration gratuite, en un clic.
+
+## Suivre la consommation
+
+L'onglet **Utilisation** affiche l'évolution réelle du CPU, de la RAM et du réseau sur les 30 derniers jours (mesures remontées chaque minute, pas une simulation).
 
 ## Actions disponibles depuis l'espace client
 
 Depuis la fiche de votre VPS :
 
 - **Démarrer / Redémarrer / Arrêter**
-- **Réinstaller le système** (efface toutes les données — une sauvegarde « avant opération » est créée automatiquement)
-- **Suivre la consommation** (CPU, RAM, bande passante)
+- **Changer d'offre** (redimensionne réellement vCPU/RAM/disque)
+- **Cloner** le service en une nouvelle instance
 
 ## Voir aussi
 
