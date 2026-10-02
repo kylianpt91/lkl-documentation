@@ -5,36 +5,21 @@ title: Gérer son nom de domaine
 
 # Gérer votre nom de domaine
 
-Après l'enregistrement, votre domaine apparaît dans l'[espace client](https://clients.lklcloud.fr), rubrique **Domaines**. Comptez quelques minutes pour que l'enregistrement soit effectif.
+:::info Bientôt disponible
+L'enregistrement de nom de domaine n'est pas encore ouvert à la commande en libre-service. Cette page décrit ce qui sera disponible à l'ouverture.
+:::
 
 ## Serveurs DNS (nameservers)
 
-Par défaut, votre domaine utilise les serveurs DNS de LKL Cloud (`dns1.lklcloud.fr`, `dns2.lklcloud.fr`) : c'est ce qui permet de gérer vos enregistrements directement depuis l'espace client. Vous pouvez les remplacer par des serveurs tiers depuis l'onglet **Serveurs DNS** de la fiche du domaine — dans ce cas, la zone DNS doit être gérée chez ce tiers, plus depuis LKL Cloud.
+Par défaut, un domaine utilisera les serveurs DNS de LKL Cloud (`dns1.lklcloud.fr`, `dns2.lklcloud.fr`). Vous pourrez les remplacer par des serveurs tiers depuis l'onglet **Serveurs DNS** de la fiche du domaine.
 
-## Enregistrements DNS
+## Zone DNS
 
-Depuis l'onglet **DNS** de la fiche du domaine, ajoutez ou modifiez vos enregistrements (A, AAAA, CNAME, MX, TXT...). Un changement met généralement quelques minutes à quelques heures à se propager selon le TTL choisi.
-
-Exemple pour pointer votre domaine vers un VPS LKL Cloud :
-
-| Type | Nom | Valeur |
-|---|---|---|
-| A | @ | IP de votre VPS |
-| CNAME | www | votredomaine.fr |
-
-## Redirections
-
-L'onglet **Redirections** permet de rediriger le domaine (ou un sous-domaine) vers une autre adresse, ou de rediriger les e-mails vers une autre boîte, sans configuration DNS manuelle.
+L'onglet **DNS** de la fiche du domaine permet de consulter vos enregistrements (A, AAAA, CNAME, MX, TXT...). Leur modification en libre-service n'est pas encore disponible : pour un changement, [ouvrez un ticket](https://clients.lklcloud.fr/support/nouveau) avec le domaine concerné et les enregistrements souhaités, notre équipe l'applique pour vous.
 
 ## Renouvellement automatique
 
-Activé par défaut. Vous pouvez le désactiver depuis la fiche du domaine — dans ce cas, pensez à renouveler manuellement avant l'expiration (`expiresAt` affichée sur la fiche), au-delà de quoi le domaine repasse en disponible publiquement après un court délai de grâce.
-
-## Sécurité
-
-- **Verrou de transfert** (transfer lock) : empêche un transfert du domaine vers un autre registrar sans votre accord explicite. Activé par défaut, à désactiver temporairement uniquement si vous initiez vous-même un transfert.
-- **Confidentialité WHOIS** : masque vos coordonnées personnelles dans l'annuaire public WHOIS.
-- **DNSSEC** : signature cryptographique de votre zone DNS contre certaines attaques de type usurpation. À activer depuis la fiche du domaine si votre domaine le supporte.
+Activable depuis la fiche du domaine.
 
 ## Voir aussi
 

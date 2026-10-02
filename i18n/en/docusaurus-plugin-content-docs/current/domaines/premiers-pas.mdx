@@ -5,36 +5,21 @@ title: Managing your domain name
 
 # Managing your domain name
 
-After registration, your domain appears in the [client area](https://clients.lklcloud.fr), under **Domains**. Registration usually takes effect within a few minutes.
+:::info Coming soon
+Domain name registration is not yet open for self-service ordering. This page describes what will be available once it launches.
+:::
 
 ## Nameservers
 
-By default, your domain uses LKL Cloud's DNS servers (`dns1.lklcloud.fr`, `dns2.lklcloud.fr`) — this is what lets you manage your records directly from the client area. You can replace them with third-party nameservers from the **Nameservers** tab of the domain page — in that case, the DNS zone must be managed with that third party instead of LKL Cloud.
+By default, a domain will use LKL Cloud's DNS servers (`dns1.lklcloud.fr`, `dns2.lklcloud.fr`). You'll be able to replace them with third-party nameservers from the **Nameservers** tab of the domain page.
 
-## DNS records
+## DNS zone
 
-From the **DNS** tab of the domain page, add or edit your records (A, AAAA, CNAME, MX, TXT...). A change usually takes a few minutes to a few hours to propagate, depending on the chosen TTL.
-
-Example to point your domain to an LKL Cloud VPS:
-
-| Type | Name | Value |
-|---|---|---|
-| A | @ | Your VPS's IP |
-| CNAME | www | yourdomain.com |
-
-## Redirects
-
-The **Redirects** tab lets you redirect the domain (or a subdomain) to another address, or redirect emails to another inbox, without manual DNS configuration.
+The **DNS** tab of the domain page lets you view your records (A, AAAA, CNAME, MX, TXT...). Editing them in self-service isn't available yet: for a change, [open a ticket](https://clients.lklcloud.fr/support/nouveau) with the domain and the records you need, and our team will apply it for you.
 
 ## Automatic renewal
 
-Enabled by default. You can disable it from the domain page — in that case, remember to renew manually before expiration (`expiresAt` shown on the page), after which the domain becomes publicly available again after a short grace period.
-
-## Security
-
-- **Transfer lock**: prevents a transfer of the domain to another registrar without your explicit approval. Enabled by default — only disable it temporarily if you're initiating a transfer yourself.
-- **WHOIS privacy**: hides your personal details from the public WHOIS directory.
-- **DNSSEC**: cryptographic signing of your DNS zone against certain spoofing attacks. Enable it from the domain page if your domain supports it.
+Can be enabled from the domain page.
 
 ## See also
 
