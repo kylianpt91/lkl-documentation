@@ -5,34 +5,18 @@ title: Migrer un site existant
 
 # Migrer un site depuis un autre hébergeur
 
-## 1. Préparer l'export chez l'ancien hébergeur
+:::info Bientôt disponible
+Cette page suppose un hébergement web actif chez LKL Cloud, pas encore ouvert à la commande (voir [Débuter avec Plesk](/web/plesk-debuter)).
+:::
 
-- **Fichiers** : téléchargez l'intégralité du site via FTP/SFTP, ou générez une archive complète si votre ancien panel le propose.
-- **Base de données** : exportez un dump SQL complet (souvent via phpMyAdmin → **Exporter**, ou une commande `mysqldump`).
+Une fois le service disponible, la migration suivra ces grandes étapes :
 
-## 2. Créer le site sur LKL Cloud
+1. **Export chez l'ancien hébergeur** : fichiers via FTP/SFTP ou archive complète, dump SQL de la base de données.
+2. **Création du site sur LKL Cloud** : ajout du domaine dans Plesk, en utilisant le sous-domaine temporaire fourni tant que le domaine pointe encore vers l'ancien hébergeur.
+3. **Import des fichiers et de la base**, puis mise à jour des identifiants de connexion dans la configuration du site.
+4. **Tests via le sous-domaine temporaire**, avant de couper le DNS de l'ancien hébergeur.
+5. **Bascule du domaine** une fois les tests concluants.
 
-Depuis Plesk, ajoutez votre domaine comme décrit dans [Débuter avec Plesk](/web/plesk-debuter). Tant que le domaine pointe encore vers l'ancien hébergeur, utilisez le sous-domaine temporaire fourni pour travailler sans coupure.
+## Besoin d'aide pour planifier une migration ?
 
-## 3. Importer vos fichiers et votre base
-
-- Déposez vos fichiers via le gestionnaire de fichiers Plesk ou en FTP/SFTP.
-- Créez une base de données (**Bases de données** → **Ajouter**) et importez votre dump SQL.
-- Mettez à jour les identifiants de connexion à la base dans la configuration de votre site (souvent un fichier `wp-config.php`, `.env` ou équivalent selon votre CMS).
-
-## 4. Tester avant de basculer le DNS
-
-Utilisez le sous-domaine temporaire (ou modifiez temporairement votre fichier `hosts` local) pour vérifier que le site fonctionne correctement chez LKL Cloud **avant** de couper le DNS de l'ancien hébergeur.
-
-## 5. Basculer le domaine
-
-Une fois les tests concluants :
-
-- Si votre domaine est déjà chez LKL Cloud, modifiez simplement l'enregistrement **A** pour pointer vers votre nouvel hébergement (voir [Gérer son nom de domaine](/domaines/premiers-pas)).
-- Sinon, transférez le domaine ou modifiez les enregistrements DNS chez votre registrar actuel.
-
-Comptez jusqu'à 24 h pour une propagation complète — gardez l'ancien hébergement actif pendant ce délai, le temps que tous les visiteurs basculent.
-
-## Besoin d'aide pour la migration ?
-
-Écrivez-nous à [support@lklcloud.fr](mailto:support@lklcloud.fr) en précisant votre CMS (WordPress, etc.) et la taille approximative de votre site.
+Écrivez-nous à [support@lklcloud.fr](mailto:support@lklcloud.fr) en précisant votre CMS (WordPress, etc.) et la taille approximative de votre site, nous reviendrons vers vous dès l'ouverture de ce service.

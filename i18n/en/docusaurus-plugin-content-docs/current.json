@@ -16,7 +16,7 @@
     "description": "The label for category 'Hébergement web' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Hébergement web.link.generated-index.description": {
-    "message": "Shared hosting with the Plesk panel.",
+    "message": "Web hosting: coming soon.",
     "description": "The generated-index page description for category 'Hébergement web' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Noms de domaine": {
@@ -24,7 +24,7 @@
     "description": "The label for category 'Noms de domaine' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Noms de domaine.link.generated-index.description": {
-    "message": "Registration, DNS and redirects for your domain names.",
+    "message": "Domain names: coming soon.",
     "description": "The generated-index page description for category 'Noms de domaine' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Bots Discord": {
@@ -32,7 +32,7 @@
     "description": "The label for category 'Bots Discord' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Bots Discord.link.generated-index.description": {
-    "message": "Hosting Node.js and Python Discord bots via the Pterodactyl panel.",
+    "message": "Discord bots: coming soon.",
     "description": "The generated-index page description for category 'Bots Discord' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Compte & facturation": {
